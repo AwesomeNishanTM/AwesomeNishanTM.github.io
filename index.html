@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Proposal Page</title>
+  <title>My Love Proposal</title>
   <style>
     * {
       margin: 0;
@@ -60,25 +60,25 @@
 </head>
 <body>
 
-<div id="main" class="container" style="background-image: url('https://i.pinimg.com/originals/12/89/00/128900d9c4160fdc5f3bb94f01a7f4d1.jpg');">
-  <h1>Dear wife</h1>
+<div id="main" class="container" style="background-image: url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1470&q=80');">
+  <h1>Dear Wife</h1>
   <p>From the moment I met you, I knew you were the one. I want to spend my forever loving you.</p>
   
   <label for="backgrounds">Change Background: </label>
   <select id="backgrounds">
-    <option value="anime">Anime Hug</option>
-    <option value="krishna">Radha & Krishna</option>
-    <option value="birds">Romantic Birds</option>
-    <option value="sunset">Romantic Sunset</option>
+    <option value="1">Romantic Sunset</option>
+    <option value="2">Roses</option>
+    <option value="3">Starry Night</option>
+    <option value="4">Beach Love</option>
   </select>
 </div>
 
 <script>
   const backgrounds = {
-    anime: "https://i.pinimg.com/originals/12/89/00/128900d9c4160fdc5f3bb94f01a7f4d1.jpg",
-    krishna: "https://i.pinimg.com/originals/1a/5e/79/1a5e79f66082062f9d9e6a408efdb4e9.jpg",
-    birds: "https://images.unsplash.com/photo-1603984326992-d6b2fc54b6cb?auto=format&fit=crop&w=1470&q=80",
-    sunset: "https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1470&q=80"
+    1: "https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1470&q=80", // sunset
+    2: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1470&q=80", // roses
+    3: "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1470&q=80", // starry night
+    4: "https://images.unsplash.com/photo-1496309732348-3627f3f040ee?auto=format&fit=crop&w=1470&q=80"  // beach
   };
 
   const select = document.getElementById("backgrounds");
