@@ -2,67 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Heart for My Wife</title>
+  <title>Simple Heart Message</title>
   <style>
     body {
+      background-color: #fff0f0;
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: #ffe6e6;
-      margin: 0;
-      font-family: 'Arial', sans-serif;
+    }
+
+    .heart-container {
+      text-align: center;
     }
 
     .heart {
+      width: 100px;
+      height: 90px;
+      background-color: red;
       position: relative;
-      width: 200px;
-      height: 180px;
-      background: red;
-      transform: rotate(-45deg);
-      margin: 50px;
+      margin: 0 auto 20px auto;
     }
 
     .heart::before,
     .heart::after {
       content: "";
       position: absolute;
-      width: 200px;
-      height: 180px;
-      background: red;
+      width: 100px;
+      height: 90px;
+      background-color: red;
       border-radius: 50%;
     }
 
     .heart::before {
-      top: -100px;
+      top: -50px;
       left: 0;
     }
 
     .heart::after {
-      left: 100px;
       top: 0;
+      left: 50px;
     }
 
     .message {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: rotate(45deg) translate(-50%, -50%);
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 18px;
+      font-size: 20px;
+      color: #b30000;
       font-weight: bold;
-      line-height: 1.5;
     }
   </style>
 </head>
 <body>
-  <div class="heart">
-    <div class="message">
-      Dear Wife<br>
-      I Love You
-    </div>
+  <div class="heart-container">
+    <div class="heart"></div>
+    <div class="message">Dear Wife<br>I Love You</div>
   </div>
 </body>
 </html>
