@@ -2,61 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple Heart Message</title>
+  <title>My Love Proposal</title>
   <style>
-    body {
-      background-color: #fff0f0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .heart-container {
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 8px #000;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 40px;
+      max-width: 600px;
       text-align: center;
     }
 
-    .heart {
-      width: 100px;
-      height: 90px;
-      background-color: red;
-      position: relative;
-      margin: 0 auto 20px auto;
+    select {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.8);
+      color: #333;
+      cursor: pointer;
     }
 
-    .heart::before,
-    .heart::after {
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 90px;
-      background-color: red;
-      border-radius: 50%;
-    }
-
-    .heart::before {
-      top: -50px;
-      left: 0;
-    }
-
-    .heart::after {
-      top: 0;
-      left: 50px;
-    }
-
-    .message {
-      font-size: 20px;
-      color: #b30000;
-      font-weight: bold;
+    option {
+      background: white;
+      color: black;
     }
   </style>
 </head>
 <body>
+
+<div id="main" class="container" style="background-image: url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1470&q=80');">
+  <h1>Will You Marry Me?</h1>
+  <p>From the moment I met you, I knew you were the one. I want to spend my forever loving you.</p>
   
-  <div class="heart-container">
-    <div class="heart"></div>
-    <div class="message">Dear Wife<br>I Love You</div>
-  </div>
+  <label for="backgrounds">Change Background: </label>
+  <select id="backgrounds">
+    <option value="1">Romantic Sunset</option>
+    <option value="2">Roses</option>
+    <option value="3">Starry Night</option>
+    <option value="4">Beach Love</option>
+  </select>
+</div>
+
+<script>
+  const backgrounds = {
+    1: "https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1470&q=80", // sunset
+    2: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1470&q=80", // roses
+    3: "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1470&q=80", // starry night
+    4: "https://images.unsplash.com/photo-1496309732348-3627f3f040ee?auto=format&fit=crop&w=1470&q=80"  // beach
+  };
+
+  const select = document.getElementById("backgrounds");
+  const main = document.getElementById("main");
+
+  select.addEventListener("change", () => {
+    const value = select.value;
+    main.style.backgroundImage = `url('${backgrounds[value]}')`;
+  });
+</script>
+
 </body>
 </html>
